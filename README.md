@@ -1,4 +1,5 @@
 # easylib
+![alt tag](http://i.imgur.com/RjanWyF.png)
 libGdx coding made easy!
 ## What's easylib?
 Easylib was made to ease the using of libGdx, created by Ahmad Fatih (kitebizelt) on 2016 August.
@@ -11,6 +12,5 @@ easylib has many features such as:
 - Fasten your libGdx work progress
 - Easy to understand
 
-![alt tag](http://www.gamefromscratch.com/image.axd?picture=image_1272.png)
 
 So, what are you waiting for? Use easylib for your libGdx game!
