@@ -11,4 +11,6 @@ easylib has many features such as:
 - Fasten your libGdx work progress
 - Easy to understand
 
+![alt tag](http://www.gamefromscratch.com/image.axd?picture=image_1272.png)
+
 So, what are you waiting for? Use easylib for your libGdx game!
