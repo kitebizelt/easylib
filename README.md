@@ -1,4 +1,5 @@
 # easylib
+libGdx coding made easy!
 ## What's easylib?
 Easylib was made to ease the using of libGdx, created by Ahmad Fatih (kitebizelt) on 2016 August.
 easylib has many features such as:
