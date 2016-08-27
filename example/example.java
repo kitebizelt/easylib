@@ -13,7 +13,6 @@ public class example extends ApplicationAdapter {
 	scene scene;
 	Texture img;
 	object2d obj = new object2d();
-    event ev = new event();
 	
 	@Override
 	public void create () {
