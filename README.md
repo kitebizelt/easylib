@@ -8,7 +8,7 @@ easylib has many features such as:
 
 ## Why easylib?
 - It's more easier to use easylib rather than just using libGdx
-- Faster your work
+- Fasten your libGdx work progress
 - Easy to understand
 
 So, what are you waiting for? Use easylib for your libGdx game!
