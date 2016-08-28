@@ -1,5 +1,4 @@
-# easylib
-![alt tag](http://i.imgur.com/RjanWyF.png)<br/>
+![alt tag](http://i.imgur.com/nUMKi2q.png)<br/>
 libGdx coding made easy!
 ## What's easylib?
 Easylib was made to ease the using of [libGdx](https://github.com/libgdx/libgdx), created by Ahmad Fatih (kitebizelt) on 2016 August.
