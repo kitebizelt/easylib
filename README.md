@@ -8,7 +8,7 @@ easylib has many features such as:
   set mass, scale, add collision and add event on objects in only a single line!
 - __easy scene__:<br/>
   draws objects to SpriteBatch automatically, access gravity strengh and much more!
-- __easy render:__: (not yet finished) <br/>
+- __easy render:__ (not yet finished) <br/>
   switch scene, add loading screen, access most of the Gdx functions
 
 ## Why easylib?
