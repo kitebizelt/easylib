@@ -1,6 +1,6 @@
 package easylib;
 import com.badlogic.gdx.graphics.Texture;
-import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+
 import com.badlogic.gdx.math.Rectangle;
 import com.badlogic.gdx.math.Vector2;
 
@@ -20,7 +20,12 @@ public class object2d {
     protected boolean gravity = false;
     protected float velocity = 0f;
     protected float position = 0f;
-    protected float mass;
+    protected float mass = 0f;
+
+    event ev = new event();
+    Class noparams[] = {};
+    public Rectangle hitbox;
+    public boolean ishitbox;
 
     //Texture
     public void setTexture(Texture a){
@@ -81,11 +86,25 @@ public class object2d {
         this.bounds = new Rectangle(this.x,this.y,this.w,this.h);
         this.isBounds = true;
     }
-    public void addMass(float a){
+    public void addHitBox(){
+        this.hitbox = new Rectangle(this.x,this.y,this.w,this.h);
+        this.ishitbox = true;
+    }
+    public void setMass(float m){
         this.gravity = true;
-        this.mass = a;
+        this.mass = m;
     }
     public Rectangle getBounds(){
         return this.bounds;
+    }
+
+    public void onDowned(String function,Class cls) {
+        ev.add(0,cls,function,this);
+    }
+    public void onUpped(String function,Class cls){
+        ev.add(1,cls,function,this);
+    }
+    public void onDragged(String function,Class cls){
+        ev.add(2,cls,function,this);
     }
 }
