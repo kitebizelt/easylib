@@ -4,7 +4,8 @@ libGdx coding made easy!
 ## What's easylib?
 Easylib was made to ease the using of libGdx, created by Ahmad Fatih (kitebizelt) on 2016 August.
 easylib has many features such as:
-- easy objects, add mass, set scale and add collision on objects in only a single line
+- easy objects:<br/>
+  set mass, scale, add collision and add event on objects in only a single line!
 - easy scene, draws objects to SpriteBatch automatically, access gravity strengh and much more!
 
 ## Why easylib?
