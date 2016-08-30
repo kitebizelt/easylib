@@ -3,11 +3,13 @@ import com.badlogic.gdx.graphics.Texture;
 
 import com.badlogic.gdx.math.Rectangle;
 import com.badlogic.gdx.math.Vector2;
+import com.badlogic.gdx.utils.reflect.Method;
+import com.sun.org.apache.xpath.internal.functions.Function;
 
 /**
  * Created by AHMAD F on 8/27/2016.
  */
-public class object2d {
+public class Object2d {
     private Texture tex;
     private Vector2 xy = new Vector2(0,0);
     private Vector2 wh = new Vector2(0,0);
@@ -18,17 +20,21 @@ public class object2d {
     protected Rectangle bounds = new Rectangle();
     public boolean isBounds = false;
     protected boolean gravity = false;
-    protected float velocity = 0f;
-    protected float position = 0f;
+    public float gVelocity = 0f;
+    public float gPosition = 0f;
     protected float mass = 0f;
 
     event ev = new event();
-    Class noparams[] = {};
-    public Rectangle hitbox;
-    public boolean ishitbox;
+    //Class noparams[] = {};
+    public Rectangle hitBox;
+    public boolean isHitBox;
+    public Vector2 force = new Vector2(0f,0f);
+
+    //Scene scn;
 
     //Texture
     public void setTexture(Texture a){
+        //g = scn.objlist.get(scn.objlist.indexOf(a));
         this.tex = a;
         this.setWH(a.getWidth(), a.getHeight());
         this.w = a.getWidth();
@@ -87,10 +93,10 @@ public class object2d {
         this.isBounds = true;
     }
     public void addHitBox(){
-        this.hitbox = new Rectangle(this.x,this.y,this.w,this.h);
-        this.ishitbox = true;
+        this.hitBox = new Rectangle(this.x,this.y,this.w,this.h);
+        this.isHitBox = true;
     }
-    public void setMass(float m){
+    public void setFallSpeed(float m){
         this.gravity = true;
         this.mass = m;
     }
@@ -98,7 +104,7 @@ public class object2d {
         return this.bounds;
     }
 
-    public void onDowned(String function,Class cls) {
+    public void onDowned(String function, Class cls) {
         ev.add(0,cls,function,this);
     }
     public void onUpped(String function,Class cls){
@@ -106,5 +112,11 @@ public class object2d {
     }
     public void onDragged(String function,Class cls){
         ev.add(2,cls,function,this);
+    }
+
+    public void setForceY(float force, float modificationSensitivity){
+        //this.force.y = force;
+        this.gPosition = 0;
+        this.gVelocity = -0.5f;
     }
 }
